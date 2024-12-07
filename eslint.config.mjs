@@ -14,6 +14,7 @@ export default withNuxt([
     rules: {
       'no-unused-expressions': 'off',
       '@typescript-eslint/no-unused-expressions': 'off',
+      'vue/no-multiple-template-root': 'off',
     },
   },
   eslintConfigPrettier,
