@@ -43,7 +43,7 @@
             </FormItem>
           </FormField>
         </div>
-        <div class="text-center">
+        <div class="flex flex-col items-center gap-2 text-center">
           <Button
             type="submit"
             class="w-40 bg-primary text-base text-white hover:bg-primary-hover md:text-lg"
@@ -51,6 +51,14 @@
           >
             Sign Up
           </Button>
+          <p>
+            Already have an account?
+            <NuxtLink
+              href="/login"
+              class="text-primary hover:text-primary-hover"
+              >Log in with your account</NuxtLink
+            >
+          </p>
         </div>
       </form>
     </div>
@@ -67,6 +75,14 @@ import { toast } from '@/components/ui/toast';
 import * as z from 'zod';
 import type { ApiResponse, RegisterResponse } from '~/types/apiResponse';
 import { isErrorResponse } from '~/types/utils';
+
+definePageMeta({
+  middleware: 'auth',
+  auth: {
+    unauthenticatedOnly: true,
+    navigateAuthenticatedTo: '/dashboard',
+  },
+});
 
 const config = useRuntimeConfig();
 

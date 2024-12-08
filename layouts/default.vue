@@ -22,10 +22,52 @@
           </Button>
         </NuxtLink>
       </div>
-      <div class="justify-self-end">
+      <div v-if="status === 'unauthenticated'" class="justify-self-end">
         <NuxtLink to="/login">
           <Button class="text-base md:text-lg" variant="ghost">Log in</Button>
         </NuxtLink>
+      </div>
+      <div v-else class="justify-self-end">
+        <div class="hidden gap-4 md:flex">
+          <NuxtLink to="/dashboard">
+            <Button class="text-base md:text-lg" variant="ghost"
+              >Dashboard</Button
+            >
+          </NuxtLink>
+          <Button
+            class="text-base md:text-lg"
+            variant="destructive"
+            @click="() => signOut({ callbackUrl: '/' })"
+            >Log out</Button
+          >
+        </div>
+        <div class="md:hidden">
+          <DropdownMenu>
+            <DropdownMenuTrigger as-child>
+              <Button variant="ghost">
+                <Icon name="prime:align-justify" size="32" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>
+                <NuxtLink to="/dashboard">
+                  <Button class="text-base md:text-lg" variant="ghost"
+                    >Dashboard</Button
+                  >
+                </NuxtLink>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>
+                <Button
+                  class="text-base text-red-500 md:text-lg"
+                  variant="ghost"
+                  @click="() => signOut({ callbackUrl: '/' })"
+                  >Log out</Button
+                ></DropdownMenuItem
+              >
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </div>
     </header>
     <slot />
@@ -48,4 +90,6 @@ useSeoMeta({
   ogDescription: 'Upload Temp File, Get Link, and Share',
   ogImage: '/logo.svg',
 });
+
+const { status, signOut } = useAuth();
 </script>
