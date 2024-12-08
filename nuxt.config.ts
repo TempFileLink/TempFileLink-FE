@@ -10,5 +10,11 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     '@nuxt/icon',
     '@vueuse/motion/nuxt',
+    '@vee-validate/nuxt',
   ],
+  runtimeConfig: {
+    public: {
+      apiBase: '',
+    },
+  },
 });
