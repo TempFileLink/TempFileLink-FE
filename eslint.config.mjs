@@ -9,6 +9,8 @@ const __dirname = path.dirname(__filename);
 const gitignorePath = path.resolve(__dirname, '.gitignore');
 
 export default withNuxt([
+  // Note: https://github.com/nuxt/eslint/discussions/413
+  { ignores: ['components/'] },
   // Note: https://github.com/nuxt/eslint/issues/518
   {
     rules: {
