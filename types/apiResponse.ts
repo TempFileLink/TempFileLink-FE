@@ -5,10 +5,6 @@ type ErrorResponse = {
   message: string;
 };
 
-type LoginResponse = {
-  token: string;
-};
-
 type RegisterResponse = {
   id: string;
   createdAt: string;
@@ -17,4 +13,4 @@ type RegisterResponse = {
   email: string;
 };
 
-export type { ApiResponse, LoginResponse, RegisterResponse, ErrorResponse };
+export type { ApiResponse, RegisterResponse, ErrorResponse };
