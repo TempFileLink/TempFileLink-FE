@@ -61,6 +61,9 @@ async function downloadFile() {
   await useFetch(
     `${config.public.apiBase}/api/v1/file/get/${id}?password=${value.value}`,
     {
+      onRequest({ options }) {
+        options.headers.set('ngrok-skip-browser-warning', '1');
+      },
       onResponse({ response }) {
         // Process the response data
         if (response.ok) {
