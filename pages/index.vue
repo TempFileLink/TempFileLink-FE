@@ -124,6 +124,8 @@
 </template>
 
 <script lang="ts" setup>
+import { Badge } from '~/components/ui/badge';
+
 definePageMeta({
   auth: false,
 });
