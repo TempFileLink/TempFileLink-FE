@@ -29,6 +29,16 @@
                 >
               </NuxtLink>
 
+              <NuxtLink
+                :to="{ name: 'email-id', params: { id: file.fileId } }"
+                target="_blank"
+              >
+                <Button
+                  class="rounded bg-blue-500 px-4 py-1 font-bold text-white hover:bg-blue-700"
+                  >Share</Button
+                >
+              </NuxtLink>
+
               <Button
                 class="rounded bg-red-500 px-4 py-1 font-bold text-white hover:bg-red-700"
                 @click="() => deleteFile(file.fileId)"
