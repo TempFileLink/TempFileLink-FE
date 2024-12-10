@@ -13,6 +13,12 @@ type RegisterResponse = {
   email: string;
 };
 
+type UploadResponse = {
+  expiryTime: string;
+  fileId: string;
+  message: string;
+};
+
 type InfoFileResponse = {
   filename: string;
   fileId: string;
@@ -28,6 +34,7 @@ export type {
   ApiResponse,
   RegisterResponse,
   ErrorResponse,
+  UploadResponse,
   InfoFileResponse,
   ListFilesResponse,
 };
