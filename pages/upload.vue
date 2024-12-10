@@ -27,7 +27,7 @@
                     v-bind="componentField"
                     @change="handleFileChange"
                     :disabled="isUploading"
-                    class="cursor-pointer file:mr-4 file:cursor-pointer file:rounded-full file:border-0 file:bg-primary file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-primary-hover"
+                    class="cursor-pointer file:mr-4 file:cursor-pointer file:rounded-full file:border-0 file:bg-primary file:px-4 file:py-1 file:text-sm file:font-semibold file:text-white hover:file:bg-primary-hover"
                   />
                   <p v-if="selectedFile" class="mt-2 text-sm text-gray-600">
                     Selected: {{ selectedFile.name }}
