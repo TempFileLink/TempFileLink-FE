@@ -77,9 +77,6 @@
         class="flex min-h-80 items-center justify-center gap-8 md:h-96 md:gap-16"
       >
         <div class="flex max-w-[400px] flex-col gap-2">
-          <div>
-            <Badge class="bg-emerald-500">Coming soon</Badge>
-          </div>
           <h2 class="text-2xl font-bold md:text-4xl">
             Protect Temp Files with Password
           </h2>
@@ -102,7 +99,9 @@
         </div>
         <div class="flex max-w-[400px] flex-col gap-2">
           <div>
-            <Badge class="bg-emerald-500">Coming soon</Badge>
+            <Badge class="bg-emerald-500 hover:bg-emerald-600"
+              >Coming soon</Badge
+            >
           </div>
           <h2 class="text-2xl font-bold md:text-4xl">
             Notify Through Email to Get a Shared Link
