@@ -77,6 +77,9 @@
         class="flex min-h-80 items-center justify-center gap-8 md:h-96 md:gap-16"
       >
         <div class="flex max-w-[400px] flex-col gap-2">
+          <div>
+            <Badge class="bg-emerald-500">Coming soon</Badge>
+          </div>
           <h2 class="text-2xl font-bold md:text-4xl">
             Protect Temp Files with Password
           </h2>
@@ -90,6 +93,27 @@
           <NuxtImg src="/password.svg" />
         </div>
       </section>
+      <section
+        v-motion-slide-visible-once-right
+        class="flex min-h-80 items-center justify-center gap-8 md:h-96 md:gap-16"
+      >
+        <div class="max-h-80 max-w-80">
+          <NuxtImg src="/notification.svg" />
+        </div>
+        <div class="flex max-w-[400px] flex-col gap-2">
+          <div>
+            <Badge class="bg-emerald-500">Coming soon</Badge>
+          </div>
+          <h2 class="text-2xl font-bold md:text-4xl">
+            Notify Through Email to Get a Shared Link
+          </h2>
+          <p class="text-base md:text-lg">
+            Simplify sharing with email notifications! Input an email address
+            during upload, and the recipient will receive the shared link
+            directly in their inbox for hassle-free access.
+          </p>
+        </div>
+      </section>
     </div>
   </main>
   <footer class="flex items-center justify-center px-6 py-4">
@@ -100,6 +124,8 @@
 </template>
 
 <script lang="ts" setup>
+import { Badge } from '~/components/ui/badge';
+
 definePageMeta({
   auth: false,
 });
