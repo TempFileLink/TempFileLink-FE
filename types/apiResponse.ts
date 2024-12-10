@@ -19,4 +19,22 @@ type UploadResponse = {
   message: string;
 };
 
-export type { ApiResponse, RegisterResponse, ErrorResponse, UploadResponse };
+type InfoFileResponse = {
+  filename: string;
+  fileId: string;
+  isPassword: boolean;
+  contentSize: number;
+};
+
+type ListFilesResponse = {
+  data: { fileId: string; name: string }[];
+};
+
+export type {
+  ApiResponse,
+  RegisterResponse,
+  ErrorResponse,
+  UploadResponse,
+  InfoFileResponse,
+  ListFilesResponse,
+};
